@@ -74,7 +74,7 @@ def computeSolution( N, h, a, b, tol ):
     return u        
 
 
-prefix = "/home/gaurav/CS6220/HW1/plots/PythonGaussSiedel_Solution/"
+prefix = "/home/gaurav/plots/PythonGaussSiedel_Solution/"
 
 l = 3
 h = 1

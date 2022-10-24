@@ -94,7 +94,7 @@ def computePareto( ):
     hvals = np.arange( 0.1, 1.1, 0.1 )
     bvals = np.arange( 0, 1.1, 0.1 )
     N = 41
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/pareto/"
+    prefixstr = "/home/gaurav/plots/pareto/"
 
     QIinfo = []
 

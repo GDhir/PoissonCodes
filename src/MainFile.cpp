@@ -18,7 +18,7 @@ void computeChannelFlow() {
     vector<int> gridsize{ 41 };
     vector<Grid> grids;
 
-    string prefixstr = "/home/gaurav/CS6220/HW1/plots/plotdir_b=1.0/";   
+    string prefixstr = "/home/gaurav/plots/plotdir_b=1.0/";   
     writeOutput<int>( gridsize, prefixstr + "gridsize.txt" );
 
     for( auto& sz: gridsize ) {
@@ -91,7 +91,7 @@ void computePareto() {
         bvals.push_back( k );
     }
 
-    string prefixstr = "/home/gaurav/CS6220/HW1/plots/pareto/";
+    string prefixstr = "/home/gaurav/plots/pareto/";
 
     vector<vector<double>> QVals;
 
@@ -149,7 +149,7 @@ void computePoissonIterative( string method ) {
         int N{49}, maxiter{1000000};
         Grid grid( N, N );
 
-        string prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/" + method + "/";
+        string prefixstr = "/home/gaurav/plots/PoissonMG/" + method + "/";
 
         Solver slv;
 
@@ -195,7 +195,7 @@ void computePoissonMG( int Nval, int nlevels ) {
     for( auto&w: wvals ) {
         cout << w;
 
-        string prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/MG/";
+        string prefixstr = "/home/gaurav/plots/PoissonMG/MG/";
 
         Solver slv;
 

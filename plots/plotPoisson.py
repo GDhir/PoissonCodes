@@ -8,7 +8,7 @@ import utils
 
 def getBestW():
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/GS/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/GS/"
     N = 25
 
     totalIters = []
@@ -46,11 +46,11 @@ def getBestW():
     plt.show()
 
 def computeMG():
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/MG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/MG/"
     N = 25
     w = 0.50
 
-    os.system("/usr/bin/cmake --build /home/gaurav/CS6220/HW1/build --config Debug --target all -- -j 10")
+    os.system("/usr/bin/cmake --build /home/gaurav/build --config Debug --target all -- -j 10")
     os.system( "/home/gaurav/CS6220/HW1/build/bin/solver" )
 
     xdata, ydata, udata = utils.getSolutionData( prefixstr + "solnsN=" + str(N) + "w=" + "{:.2f}".format(w) + ".txt", N )
@@ -76,7 +76,7 @@ def computeMG():
 
 def computeIterative( method ):
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/" + method + "/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/" + method + "/"
     N = 25
     w = 0.8
 
@@ -104,7 +104,7 @@ def computeIterative( method ):
 
 def compareConvergence():
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/"
     N = 241
     wvals = [0.8]
     # dirvals = [ "GS", "Jacobi", "MG" ]
@@ -144,7 +144,7 @@ def compareConvergence():
 
 def compareMGConvergence():
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/MG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/MG/"
     N = 25
     wvals = [0.50, 0.8, 1.0]
 
@@ -176,7 +176,7 @@ def compareMGConvergence():
 
 def compareMGGrids():
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/MG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/MG/"
     Nvals = [ 49, 97 ]
     wvals = [0.50, 0.8, 1.0]
     labels = [ "(1, 2, 1)", "(2, 4, 2)" ]
@@ -209,7 +209,7 @@ def compareMGGrids():
 
 def compareMGLevels():
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/MG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/MG/"
     N = 97
     nlevels = [ 2, 3, 4 ] 
     wvals = [0.50, 0.8, 1.0]
@@ -266,7 +266,7 @@ def compareMGLevels():
 def compareMGLevelsWithIterative():
 
 
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/PoissonMG/"
+    prefixstr = "/home/gaurav/plots/PoissonMG/"
     N = 49
     nlevels = [ 2, 3, 4 ] 
     wvals = [0.50, 0.8, 1.0]

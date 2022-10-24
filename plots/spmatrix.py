@@ -89,7 +89,7 @@ def computeConvergence():
         linferror = []
         deltax = []
 
-        prefixstr = "/home/gaurav/CS6220/HW1/plots/MatsolveData/" + "plotb=" + str(b) + "/"
+        prefixstr = "/home/gaurav/plots/MatsolveData/" + "plotb=" + str(b) + "/"
 
         for N in Nvals:
             
@@ -192,7 +192,7 @@ def computeConvergence():
 def LUSolver():
 
     l = 3
-    prefixstr = "/home/gaurav/CS6220/HW1/plots/"
+    prefixstr = "/home/gaurav/plots/"
     h = 1
     b = 0.5
     a = utils.computea( h, b, l )
